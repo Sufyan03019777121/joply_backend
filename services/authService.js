@@ -2,6 +2,8 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../models/authModel.js";
 
+
+
 export const registerUser = async (userData) => {
   const { username, email, password, address, bio } = userData;
   const existingUser = await User.findOne({ email });
